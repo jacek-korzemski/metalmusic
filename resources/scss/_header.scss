@@ -1,0 +1,86 @@
+header {
+    background: black;
+    padding: 8px 0;
+    nav {
+        text-align: center;
+        @media (min-width: $screen-md) {
+            text-align: left;
+        }
+        .logo {
+            font-size: 36px;
+            color: $color-white;
+            font-family: $font-header;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+    .main-menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 7px 0 15px 0;
+        padding: 0;
+        flex-direction: column;
+        @media (min-width: $screen-sm) {
+            flex-direction: row;
+            margin: 2px 0 0 0;
+        }
+        li {
+            padding: 0;
+            margin: 4px 6px;
+            font-size: 24px;
+            a {
+                font-family: $font-header;
+                color: $color-white;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+.category-data {
+    padding-bottom: 30px;
+    text-align: center;
+    p, h1, h2, h3 {
+        color: $color-white;
+    }
+}
+.hero {
+    background: $bg-gradient-3;
+    .search {
+        display: flex;
+        height: auto;
+        margin: 32px auto 32px auto;
+        input[type="text"] {
+            width: 420px;
+            padding: 8px 16px;
+            border-radius: 99px 0 0 99px;
+            border: 1px solid black;
+            border-right: none;
+            outline: none;
+            font-size: 18px;
+        }
+        button {
+            width: 128px;
+            padding: 8px;
+            border-radius: 0 99px 99px 0;
+            border: 1px solid black;
+            font-size: 18px;
+            background: black;
+            color: $color-white;
+            cursor: pointer;
+            &:hover {
+                background: rgb(144, 0, 0);
+                color: $color-white;
+            }
+        }
+    }
+    .front-text {
+        color: $color-white;
+        text-align: center;
+        margin: 0 0 32px 0;
+    }
+}

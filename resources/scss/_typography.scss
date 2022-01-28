@@ -1,0 +1,42 @@
+h1, h2, h3, h4 {
+    font-family: $font-header;
+    color: rgba(48,24,24);
+}
+h1 {
+    font-size: 36px;
+    margin: 0 0 15px 0;
+}
+h2 {
+    font-size: 30px;
+    margin: 0 0 15px 0;
+}
+h3 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+}
+h4 {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+}
+p {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    color: rgba(48,48,48);
+    line-height: 2rem;
+    a {
+        color: red;
+        text-decoration: none;
+        &:hover {
+            color: black;
+            text-decoration: underline;
+        }
+    }
+}
+a {
+    text-decoration: none;
+}
+blockquote {
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(255,125,125,0.3);
+}

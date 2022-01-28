@@ -1,0 +1,4 @@
+The idea of the blog, design and data structure - Jacek Korzemski
+Text content of articles - Jacek Korzemski
+The main engine, framework, skeleton of the blog application - Laravel 8 (https://laravel.com/)
+Generating Thumbnail for pagespeed optimization - ThumbPHP() (http://phpthumb.sourceforge.net/)
