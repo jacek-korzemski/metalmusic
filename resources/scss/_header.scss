@@ -44,12 +44,14 @@ header {
 .category-data {
     padding-bottom: 30px;
     text-align: center;
-    p, h1, h2, h3 {
+    p,
+    h1,
+    h2,
+    h3 {
         color: $color-white;
     }
 }
 .hero {
-    background: $bg-gradient-3;
     .search {
         display: flex;
         height: auto;

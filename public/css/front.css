@@ -1942,6 +1942,15 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #333447;
+  background: url("/uploads/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 .text-left {
@@ -2014,13 +2023,13 @@ header .main-menu li a:hover {
   padding-bottom: 30px;
   text-align: center;
 }
-.category-data p, .category-data h1, .category-data h2, .category-data h3 {
+.category-data p,
+.category-data h1,
+.category-data h2,
+.category-data h3 {
   color: #d7d7d7;
 }
 
-.hero {
-  background: linear-gradient(210deg, #900000 0%, black 100%);
-}
 .hero .search {
   display: flex;
   height: auto;
@@ -2060,9 +2069,6 @@ header .main-menu li a:hover {
   min-height: 10px;
 }
 
-.featured-articles {
-  background: linear-gradient(63deg, #900000 0%, black 100%);
-}
 .featured-articles .article {
   aspect-ratio: 1/1;
   position: relative;
@@ -2130,11 +2136,7 @@ header .main-menu li a:hover {
 }
 
 .main-articles {
-  background: linear-gradient(324deg, #900000 0%, black 100%);
   padding: 64px 0;
-}
-.main-articles.page {
-  background: linear-gradient(210deg, #900000 0%, black 100%);
 }
 .main-articles h2 {
   border-bottom: 1px solid #d7d7d7;
@@ -2216,7 +2218,6 @@ header .main-menu li a:hover {
 }
 
 .sent-by-articles {
-  background: linear-gradient(126deg, #900000 0%, black 100%);
   padding: 64px 0;
 }
 .sent-by-articles .article-wrapper {
@@ -2252,6 +2253,52 @@ header .main-menu li a:hover {
 .sent-by-articles .article:hover {
   border: 6px solid red;
   background: white;
+}
+
+.post-title {
+  padding: 15px 0;
+  background: black;
+}
+.post-title h1 {
+  color: white;
+  text-align: center;
+}
+
+.post-wrapper .post-content {
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+.post-wrapper .post-content h1,
+.post-wrapper .post-content h2,
+.post-wrapper .post-content h3 {
+  color: black;
+}
+.post-wrapper .post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.post-wrapper .main-articles {
+  padding-top: 0;
+}
+@media (min-width: 993px) {
+  .post-wrapper .main-articles .article-wrapper .article {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .post-wrapper .main-articles .article-wrapper .article .right {
+    width: 100%;
+  }
+}
+.post-wrapper .main-articles .article-wrapper .article .left img {
+  display: block;
+  margin: 0 auto 10px auto;
 }
 
 form {

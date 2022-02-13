@@ -1,4 +1,4 @@
-@import '_grid';
+@import "_grid";
 
 body {
     margin: 0;
@@ -6,22 +6,29 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: #333447;
+    background: url("/uploads/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
-
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
 .text-left {
-  text-align: left;
+    text-align: left;
 }
 
 .text-right {
-  text-align: right;
+    text-align: right;
 }
 
 .text-center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-justify {
-  text-align: justify;
+    text-align: justify;
 }
