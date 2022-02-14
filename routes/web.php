@@ -53,7 +53,7 @@ Route::get('/{category_slug}/{slug_or_page}', function($category_slug, $slug_or_
 {
     if (is_numeric($slug_or_page)) 
     {
-        return 'cat: ' . $category_slug . ' page: ' . $slug_or_page;
+        return CategoryController::show($category_slug, $slug_or_page);
     }
 
     $category = Category::where('slug', $category_slug)->get()->first();
