@@ -26,13 +26,17 @@ Route::get('/', function ()
 });
 
 // Admin routes
-Route::get('/admin', function() 
-{
-    return 'Miejsce na panel admina';
+Route::prefix('admin')->group(function() {
+    Route::get('/', function() { 
+        return App\Http\Controllers\Admin\AdminController::index();
+    });
+    Route::get('/posts', function() { 
+        return App\Http\Controllers\Admin\PostController::index();
+    });
+    Route::get('/posts/create', function() { 
+        return App\Http\Controllers\Admin\PostController::create();
+    });
 });
-
-// Auth routes
-Auth::routes();
 
 // Static and category routes
 Route::get('/{slug}', function($slug) 
