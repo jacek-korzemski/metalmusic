@@ -1,5 +1,10 @@
 @extends('layouts.front')
 
+@section('head')
+<title>Strona główna</title>
+<meta name="description" content="Opis strony głównej" />
+@endsection
+
 @section('top')
 <div class="row">
     <div class="col-lg-2 col-md-1"></div>

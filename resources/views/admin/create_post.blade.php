@@ -41,6 +41,7 @@
                 <div class="col-12">
                     <label>Grafiki</label>
                     <div id="images">
+                        @{{test}}
                     </div>
                 </div>
             </div>
@@ -49,6 +50,17 @@
 @endsection
 
 @section('scripts')
+<script src="/js/vue.js"></script>
+<script>
+    const ImagesApp = {
+        data(){
+            return {
+                test: 'It\'s working!',
+            }
+        }
+    }
+    Vue.createApp(ImagesApp).mount('#images');
+</script>
 <script>
     let formElements = document.querySelectorAll('form input');
     formElements = [...formElements, ...document.querySelectorAll('form select')];
@@ -65,9 +77,7 @@ formElements.map((elem) => {
 </script>
 <script src="/js/pell.js"></script>
 <script>
-    // Initialize pell on an HTMLElement
-pell.init({
-  // <HTMLElement>, required
+    pell.init({
   element: document.getElementById('content'),
   onChange: html => null,
   defaultParagraphSeparator: 'p',

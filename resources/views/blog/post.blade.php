@@ -1,5 +1,10 @@
 @extends('layouts.front')
 
+@section('head')
+<title>{{$post->title}}</title>
+<meta name="description" content="{{$post->excerpt}}" />
+@endsection
+
 @section('center')
 <div class="post-wrapper">
     <div class="container">

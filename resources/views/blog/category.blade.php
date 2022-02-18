@@ -1,5 +1,10 @@
 @extends('layouts.front')
 
+@section('head')
+<title>Kategoria: {{ $category_data->title }}</title>
+<meta name="description" content="{{ $category_data->description }}" />
+@endsection
+
 @section('top')
 <div class="category-data">
     <h1>
