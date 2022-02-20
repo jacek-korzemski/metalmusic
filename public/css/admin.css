@@ -3949,6 +3949,18 @@ body {
   margin-left: 15px;
   margin-top: 15px;
   border: 1px solid #aaaaaa;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-y: scroll;
+}
+.default-form #images img {
+  height: auto;
+  max-width: 30%;
 }
 
 .content-table {
@@ -3982,6 +3994,31 @@ body {
 }
 .btn:hover {
   background: #586bc9;
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+}
+.flex-grid .img-element {
+  text-align: center;
+  width: 300px;
+  border: 1px solid black;
+  margin: 10px;
+  height: 100%;
+}
+.flex-grid .img-element img {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+.flex-grid .img-element p {
+  padding: 0 10px;
+  word-wrap: break-word;
 }
 
 .pell {

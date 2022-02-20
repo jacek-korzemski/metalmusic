@@ -30,6 +30,7 @@
                     <li><a href="/admin/posts">Posty</a></li>
                     <li><a href="/admin/categories">Kategorie</a></li>
                     <li><a href="/admin/tags">Tagi</a></li>
+                    <li><a href="/admin/media">Media</a></li>
                     <li><a href="/">Powrót na stronę</a></li>
                 </ul>
             </nav>

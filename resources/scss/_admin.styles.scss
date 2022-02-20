@@ -140,6 +140,18 @@ body {
         margin-left: 15px;
         margin-top: 15px;
         border: 1px solid #aaaaaa;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        overflow-y: scroll;
+        img {
+            height: auto;
+            max-width: 30%;
+        }
     }
 }
 
@@ -173,5 +185,30 @@ body {
     text-decoration: none;
     &:hover {
         background: #586bc9;
+    }
+}
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px;
+    .img-element {
+        text-align: center;
+        width: 300px;
+        border: 1px solid black;
+        margin: 10px;
+        height: 100%;
+        img {
+            max-width: 100%;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+        }
+        p {
+            padding: 0 10px;
+            word-wrap: break-word;
+        }
     }
 }

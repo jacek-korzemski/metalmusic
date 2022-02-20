@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class FixSentBy extends Migration
+class CreateMediaCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class FixSentBy extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('sent_by');
-        Schema::dropIfExists('sent_bies');
+        Schema::create('media_category', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('display_name');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,6 +28,6 @@ class FixSentBy extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('media_category');
     }
 }

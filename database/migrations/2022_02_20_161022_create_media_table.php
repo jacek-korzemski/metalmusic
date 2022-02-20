@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSentByTable extends Migration
+class CreateMediaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateSentByTable extends Migration
      */
     public function up()
     {
-        Schema::create('sent_by', function (Blueprint $table) {
+        Schema::create('media', function (Blueprint $table) {
             $table->id();
-            $table->integer('post_id');
+            $table->string('file_name');
+            $table->integer('file_category_id');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateSentByTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sent_by');
+        Schema::dropIfExists('media');
     }
 }

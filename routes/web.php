@@ -26,16 +26,31 @@ Route::get('/', function ()
 });
 
 // Admin routes
-Route::prefix('admin')->group(function() {
-    Route::get('/', function() { 
+Route::prefix('admin')->group(function() 
+{
+    Route::get('/', function() 
+    { 
         return App\Http\Controllers\Admin\AdminController::index();
     });
-    Route::get('/posts', function() { 
+    Route::get('/posts', function() 
+    { 
         return App\Http\Controllers\Admin\PostController::index();
     });
-    Route::get('/posts/create', function() { 
+    Route::get('/posts/create', function() 
+    { 
         return App\Http\Controllers\Admin\PostController::create();
     });
+    Route::get('/media', function()
+    {
+        return App\Http\Controllers\Admin\MediaController::index();
+    });
+    Route::get('/media/add', function()
+    {
+        return App\Http\Controllers\Admin\MediaController::create();
+    });
+
+    // separate routes for uploading files
+    Route::post('/upload-media', [App\Http\Controllers\Admin\MediaController::class, 'upload'])->name('fileUpload');
 });
 
 // Static and category routes
@@ -63,11 +78,13 @@ Route::get('/{category_slug}/{slug_or_page}', function($category_slug, $slug_or_
     $category = Category::where('slug', $category_slug)->get()->first();
     $post = Post::where('slug', $slug_or_page)->get()->first();
 
-    if ($category == null) {
+    if ($category == null) 
+    {
         return abort(404);
     }
 
-    if ($category != null && $post == null) {
+    if ($category != null && $post == null) 
+    {
         return redirect('/' . $category['slug']);
     }
 

@@ -41,7 +41,7 @@
                 <div class="col-12">
                     <label>Grafiki</label>
                     <div id="images">
-                        @{{test}}
+                        {{-- @{{test}} --}}
                     </div>
                 </div>
             </div>
@@ -57,6 +57,14 @@
             return {
                 test: 'It\'s working!',
             }
+        },
+        methods: {
+            openFolder(path) {
+                return 'siemano';
+            }
+        }
+        created() {
+            this.test = 'Hello world!';
         }
     }
     Vue.createApp(ImagesApp).mount('#images');
