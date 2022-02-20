@@ -42,8 +42,6 @@
                     <label>Grafiki</label>
                     <div id="images" v-if="this.data">
                         <img v-for="image in this.data" :src="'/uploads/images/' + image.file_name" alt="image" />
-                        <img v-for="image in this.data" :src="'/uploads/images/' + image.file_name" alt="image" />
-                        <img v-for="image in this.data" :src="'/uploads/images/' + image.file_name" alt="image" />
                     </div>
                 </div>
             </div>
