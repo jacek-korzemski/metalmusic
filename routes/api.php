@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Media;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,9 @@ use Illuminate\Support\Facades\Storage;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('/images', function()
+{
+    return Media::all();
 });

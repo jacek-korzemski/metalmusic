@@ -35,13 +35,15 @@
         <div class="col-5">
             <div class="row no-gutters">
                 <div class="col-12">
-                    <label>Dodaj grafikę</label>
-                    <input type="file" name="thumbnail" />
+                    <label>Wybierz miniaturkę</label>
+                    <input type="text" name="thumbnail" style="max-width: calc(100% - 35px);" />
                 </div>
                 <div class="col-12">
                     <label>Grafiki</label>
-                    <div id="images">
-                        {{-- @{{test}} --}}
+                    <div id="images" v-if="this.data">
+                        <img v-for="image in this.data" :src="'/uploads/images/' + image.file_name" alt="image" />
+                        <img v-for="image in this.data" :src="'/uploads/images/' + image.file_name" alt="image" />
+                        <img v-for="image in this.data" :src="'/uploads/images/' + image.file_name" alt="image" />
                     </div>
                 </div>
             </div>
@@ -55,16 +57,22 @@
     const ImagesApp = {
         data(){
             return {
-                test: 'It\'s working!',
+                data: null,
             }
         },
         methods: {
-            openFolder(path) {
-                return 'siemano';
+            loadData() {
+                fetch('/api/images').then((res) => {
+                    return res.json();
+                }).then((res) => {
+                    this.data = res;
+                }).catch((err) => {
+                    console.log(err)
+                });
             }
-        }
+        },
         created() {
-            this.test = 'Hello world!';
+            this.loadData();
         }
     }
     Vue.createApp(ImagesApp).mount('#images');
@@ -99,7 +107,8 @@ formElements.map((elem) => {
     'quote',
     'olist',
     'ulist',
-    'link'
+    'link',
+    'html'
   ],
   classes: {
     actionbar: 'pell-actionbar',

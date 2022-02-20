@@ -3959,8 +3959,10 @@ body {
   overflow-y: scroll;
 }
 .default-form #images img {
+  display: block;
+  max-width: 50%;
+  max-height: 200px;
   height: auto;
-  max-width: 30%;
 }
 
 .content-table {

@@ -149,8 +149,10 @@ body {
         gap: 10px;
         overflow-y: scroll;
         img {
+            display: block;
+            max-width: 50%;
+            max-height: 200px;
             height: auto;
-            max-width: 30%;
         }
     }
 }
